@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<citys>
+		<!--城市信息 -->
+		[
+			{'id': '3', 'city': '成都'},
+			{'id': '3', 'city': '成都'},
+			{'id': '3', 'city': '成都'}
+		]
+	</citys>
+</root>

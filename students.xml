@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<students>
+		<!--学生信息表 "id" : [名字, 数学, 语文, 英文]-->
+		[
+			{'id': '3', 'Name': '王五', 'Math': '60', 'Chinese': '66', 'English': '68'},
+			{'id': '3', 'Name': '王五', 'Math': '60', 'Chinese': '66', 'English': '68'},
+			{'id': '3', 'Name': '王五', 'Math': '60', 'Chinese': '66', 'English': '68'}
+		]
+	</students>
+</root>
