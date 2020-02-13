@@ -1,4 +1,4 @@
-## 大侄子 Python 练习册，每天一个小程序
+## 大侄子 Python 练习册，每天一个小程序  
 > 未来的程序员是明日的魔法师
 
 ## 项目一
@@ -12,7 +12,7 @@
     
     - 处理：
     
-    ![24 kobe](add_number.jpg)
+    ![24 kobe](img/add_number.jpg)
     
 - 思路：
     - 新建绘图对象：
@@ -184,7 +184,7 @@
 - 项目展示：
     - 运行结果：
     
-    ![task_08 password](password.png)
+    ![task_08 password](img/password.png)
 
       
 - 思路：
@@ -215,40 +215,40 @@
 - 项目展示：
     - 图片滤镜：
          -  grayscale
-        ![grayscale](grayscale.jpg)
+        ![grayscale](img/grayscale.jpg)
         
         -  black_white
-        ![black_white](black_white.jpg)
+        ![black_white](img/black_white.jpg)
         
         -  negative
-        ![negative](negative.jpg)
+        ![negative](img/negative.jpg)
         
         - frosted_glass
-        ![frosted_glass](frosted_glass.png)
+        ![frosted_glass](img/frosted_glass.png)
         
         -  mosaic
-        ![mosaic](mosaic.jpg)
+        ![mosaic](img/mosaic.jpg)
         
         -  nostalgia
-        ![nostalgia](nostalgia.jpg)
+        ![nostalgia](img/nostalgia.jpg)
         
         -  comic_books
-        ![comic_books](comic_books.jpg)
+        ![comic_books](img/comic_books.jpg)
         
         -  brown
-        ![brown](brown.jpg)
+        ![brown](img/brown.jpg)
         
         -  frozen
-        ![frozen](frozen.jpg)
+        ![frozen](img/frozen.jpg)
         
         -  fused_cast
-        ![fused_cast](fused_cast.jpg)
+        ![fused_cast](img/fused_cast.jpg)
 
          -  dark
-        ![dark](dark.jpg)
+        ![dark](img/dark.jpg)
         
          -  mboss
-        ![mboss](mboss.jpg)
+        ![mboss](img/mboss.jpg)
         
 - 思路：
     - 图片滤镜：
