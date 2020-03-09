@@ -53,7 +53,7 @@ def bind_input(words):  # input event
 
 
 def main():
-    file = 'filtered_words.txt'
+    file = '../task_else/filtered_words.txt'
     words = words_from_file(file)
     while True:
         bind_input(words)

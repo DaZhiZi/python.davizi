@@ -16,7 +16,7 @@ codes = {
     "note": 3,
 }
 """
-
+#
 
 def load_file(file_path):
     p = file_path
@@ -56,7 +56,8 @@ def codes_from_files(dir):
     }
     files = os.listdir(dir)
     for file in files:
-        end = file[file.find('.') + 1::]  # 有可能 文件名 不止一个点 .  我们可以判断后三位 ".py"
+        index = file.find('.') + 1
+        end = file[index::]  # 有可能 文件名 不止一个点 .  我们可以判断后三位 ".py"
         log('end', end)
         if end == 'py':
             code = codes_from_file(dir, file)
@@ -82,6 +83,7 @@ def codes_from_files(dir):
 第 0009 题：一个HTML文件，找出里面的链接。
 
 写了 ：
+
 https://github.com/DaZhiZi/crawler_py
 """
 

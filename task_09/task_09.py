@@ -58,7 +58,7 @@ def grayscale(img):
     img.show()
     pass
 
-
+ 
 def black_white(img):
     w, h = img.size
     for i in range(w):

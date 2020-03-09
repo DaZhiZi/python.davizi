@@ -1,4 +1,5 @@
 from utils import log, load_file, lower_case1
+
 """
 **第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。
 文件:
@@ -15,10 +16,13 @@ l love you
                     ....
                 ｝       
 """
+
+
 def lines_from_data(data):  # [hello i am davizi, i love you]
     lines = data.split('\n')
     # log('lines', lines)
     return lines
+
 
 def words_from_lines(lines):  # [hello, i, am, davizi, i, love, you]
     l = []
@@ -28,6 +32,7 @@ def words_from_lines(lines):  # [hello, i, am, davizi, i, love, you]
             l.append(word)
     return l
     pass
+
 
 # 'word': num,  key: value
 def map_from_list(words):
@@ -39,6 +44,7 @@ def map_from_list(words):
             map[w] = 1
     return map
 
+
 def words_num_from_file(filepath):
     r = {}
     data = load_file(filepath)
@@ -47,6 +53,8 @@ def words_num_from_file(filepath):
     words = words_from_lines(l)
     r = map_from_list(words)
     return r
+
+
 """ 2020/02/12 14:02:45
 words_num {
     'hello': 1, 
@@ -59,8 +67,10 @@ words_num {
  }
 
 """
+
+
 def main():
-    filepath = './task_04.txt'
+    filepath = '../task_else/task_04.txt'
     words_num = words_num_from_file(filepath)
     log('words_num', words_num)
     pass

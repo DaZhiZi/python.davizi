@@ -69,11 +69,17 @@ def list_from_map(map):
 
 def words_from_file(filepath):
     data = load_file(filepath)
+
     d = lower_case1(data)
+
     l = lines_from_data(d)
+
     words = words_from_lines(l)
+
     map = map_from_words(words)
+
     list = list_from_map(map)
+
     return list
 
 
@@ -81,12 +87,13 @@ def keyword_from_file(dir, filename):
     # key: word  value: times
     path = os.path.join(dir, filename)
     words = words_from_file(path)
+    log('words', words)
     word = words[0]
     max_time = words[0]["time"]
-    for index, word in enumerate(words):
-        time = word["time"]
+    for i, w in enumerate(words):
+        time = w["time"]
         if max_time < time:
-            word = words[index]
+            word = words[i]
             max_time = time
     return word
 
@@ -96,14 +103,29 @@ def keywords_from_file(dir):
     files = os.listdir(dir)
     for file in files:
         keyword = keyword_from_file(dir, file)
+        # log('keyword', keyword)
         list.append(keyword)
     return list
 
 """
-2020/02/12 16:27:21 r [{'word': 'out.', 'time': 1}, {'word': "we're", 'time': 1}, {'word': 'people?', 'time': 1}]
+bug 
+2020/02/12 16:27:21 r
+ [
+    {'word': 'out.', 'time': 1}, 
+    {'word': "we're", 'time': 1},
+    {'word': 'people?', 'time': 1}
+ ]
+ 
+ right
+ 2020/03/06 18:50:48 r [
+     {'word': 'davizi', 'time': 3},
+     {'word': 'programmers', 'time': 3},
+     {'word': 'it', 'time': 7}
+   ]
+
 """
 def main():
-    dir = './task_06_txts'
+    dir = '../task_06_txts'
     r = keywords_from_file(dir)
     log('r', r)
     pass

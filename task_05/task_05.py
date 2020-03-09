@@ -32,7 +32,7 @@ def small_image(start_dir, end_dir, filename):
             if w < 640:
                 break
         img = img.resize((int(h * 0.9), int(w * 0.9)))
-        end_path = os.path.join(end_dir, filename)
+        end_path = os.path.join(end_dir, filename) # /
         log('end_path', end_path)
         img.save(end_path)
         log('保存成功')
