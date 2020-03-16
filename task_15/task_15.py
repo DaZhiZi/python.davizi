@@ -1,4 +1,5 @@
 from utils import log
+
 """
 第 0016 题： 纯文本文件 numbers.txt, 里面的内容（包括方括号）如下所示：
 id: [num1, num2, num2]
@@ -34,12 +35,32 @@ def load_numbers(filename):
     i = 0
     for v in data:
         stu = {}
-        k = str(i+1)
+        k = str(i + 1)
         stu[k] = v
         students.append(stu)
         i += 1
     log('students', students)
     return students
+
+
+'''
+2020/03/16 13:35:29 students 
+citys [
+    {
+        'id': ['num1', 'num2', 'num3']
+    },
+    {
+        '1': [1, 82, 65535]
+    },
+    {
+        '2': [20, 90, 13]
+    },
+    {
+        '3': [26, 809, 1024]
+    }
+]
+'''
+
 
 def new_of_xls(sheetname):
     # 创建一个Workbook对象，这就相当于创建了一个Excel文件
@@ -54,14 +75,20 @@ def wirte_of_numbers(students, sheet):
     for i in range(len(students)):
         row = students[i]
         for k, v in row.items():
+            # id
             sheet.write(i, 0, str(k))
             col = v
             log('col', col)
+            #  arr
             for j in range(len(col)):
                 inform = str(col[j])
                 sheet.write(i, j + 1, inform)
 
+'''
+id num1 num2 num3
+1  23    33  24
 
+'''
 def save_numbers(read_file, save_file):
     numbers = load_numbers(read_file)
     # log('students', students)
@@ -73,9 +100,8 @@ def save_numbers(read_file, save_file):
     city.save(save_file)
 
 
-
 def main():
-    read_file = 'number.txt'
+    read_file = '../task_else/number.txt'
     save_file = 'number.xls'
     save_numbers(read_file, save_file)
     pass

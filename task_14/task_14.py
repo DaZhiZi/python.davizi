@@ -37,6 +37,29 @@ def load_citys(filename):
         students.append(stu)
     return students
 
+'''
+2020/03/16 13:26:10 
+citys [
+   {
+        'id': 'city'
+   },
+   {
+        '1': '上海'
+   },
+   {
+        '2': '北京'
+   },
+   {
+         '3': '成都'
+   },
+]
+'''
+
+# citys = [
+#     {
+#         'id': ['city','jkdu', 'wwdu']
+#     },
+# ]
 def new_of_xls(sheetname):
     # 创建一个Workbook对象，这就相当于创建了一个Excel文件
     city = xlwt.Workbook(encoding='utf-8', style_compression=0)
@@ -57,7 +80,7 @@ def wirte_of_citys(students, sheet):
 
 def save_citys(read_file, save_file):
     citys = load_citys(read_file)
-    # log('students', students)
+    log('citys', citys)
 
     (city, sheet) = new_of_xls(sheetname='city')
 
@@ -68,7 +91,7 @@ def save_citys(read_file, save_file):
 
 
 def main():
-    read_file = 'city.txt'
+    read_file = '../task_else/city.txt'
     save_file = 'city.xls'
     save_citys(read_file, save_file)
     pass

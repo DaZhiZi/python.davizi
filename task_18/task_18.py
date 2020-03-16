@@ -81,16 +81,24 @@ def new_of_student(sheet, col):
         stu[v] = ''
     return stu, keys
 
+def copy_dict(map):
+    o = map
+    new_obj = {}
+    for k, v in o.items():
+        new_obj[k] = v
+    return new_obj
+    pass
 
 def some_students(sheet, row, col, student):
     list = []
     for i in range(1, row): # 从第二行开始
         stu, keys = student
+        s = copy_dict(stu)
         for j in range(col):
             k = keys[j]
             v = sheet_value(sheet, i, j)
-            stu[k] = v
-        list.append(stu)
+            s[k] = v
+        list.append(s)
     return list
 
 def load_students(filename):
@@ -126,7 +134,7 @@ def write_to_xml(xlscontent):
 """
 
 def main():
-    filename = "number.xls"
+    filename = "../task_else/number.xls"
     stus = load_students(filename)
     # log('stus', stus)
     write_to_xml(stus)

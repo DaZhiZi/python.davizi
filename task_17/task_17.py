@@ -77,17 +77,27 @@ def new_of_student(sheet, col):
         stu[v] = ''
     return stu, keys
 
+def copy_dict(map):
+    o = map
+    new_obj = {}
+    for k, v in o.items():
+        new_obj[k] = v
+    return new_obj
+    pass
+
 
 def some_students(sheet, row, col, student):
     list = []
     for i in range(1, row): # 从第二行开始
         stu, keys = student
+        s = copy_dict(stu)
         for j in range(col):
             k = keys[j]
             v = sheet_value(sheet, i, j)
-            stu[k] = v
-        list.append(stu)
+            s[k] = v
+        list.append(s)
     return list
+
 
 def load_students(filename):
     sheet = new_of_sheet(filename)
@@ -95,6 +105,7 @@ def load_students(filename):
     log('row', row)
     student = new_of_student(sheet, col)
     students = some_students(sheet, row, col, student)
+    log('citys', students)
     return students
 
 def write_to_xml(xlscontent):
@@ -117,12 +128,16 @@ def write_to_xml(xlscontent):
         f.write(xmlfile.toprettyxml(encoding = 'utf-8')) #写入文件
 
 
-"""
-2020/02/13 15:16:47 stus [{'id': '3', 'Name': '王五', 'Math': '60', 'Chinese': '66', 'English': '68'}, {'id': '3', 'Name': '王五', 'Math': '60', 'Chinese': '66', 'English': '68'}, {'id': '3', 'Name': '王五', 'Math': '60', 'Chinese': '66', 'English': '68'}]
-"""
 
+'''
+2020/03/16 14:21:37 citys [
+  {'id': '1', 'city': '上海'},
+  {'id': '2', 'city': '北京'},
+  {'id': '3', 'city': '成都'}
+]
+'''
 def main():
-    filename = "city.xls"
+    filename = "../task_else/city.xls"
     stus = load_students(filename)
     # log('stus', stus)
     write_to_xml(stus)

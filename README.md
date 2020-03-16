@@ -415,11 +415,6 @@
 - 项目展示：
     - 运行结果：
     
-    ![task_16 xml xls](img/task_16.png)
-    
-    ![task_17 xml xls](img/task_17.png)
-     
-    ![task_18 xml xls](img/task_18.png)
 
       
 - 思路：

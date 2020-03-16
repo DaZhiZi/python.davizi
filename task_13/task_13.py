@@ -39,13 +39,20 @@ def load_students(filename):
     # 第一行
     # {'id': ['Name', 'Math','Chinese' , 'English']}
     inform = {'id': ['Name', 'Math','Chinese' , 'English']}
+    # 初始化
     students.append(inform)
     for k, v in data.items():
         stu = {}
         stu[k] = v
         students.append(stu)
+    log('studnets', students)
     return students
-
+# 2020/03/16 13:16:34 studnets [
+# {'id': ['Name', 'Math', 'Chinese', 'English']},
+# {'1': ['张三', 150, 120, 100]},
+# {'2': ['李四', 90, 99, 95]},
+# {'3': ['王五', 60, 66, 68]}
+# ]
 def new_of_xls(sheetname):
     # 创建一个Workbook对象，这就相当于创建了一个Excel文件
     student = xlwt.Workbook(encoding='utf-8', style_compression=0)
@@ -67,9 +74,10 @@ def wirte_of_students(students, sheet):
 
 
 def save_students():
-    filename = 'student.txt'
+    filename = '../task_else/student.txt'
     students = load_students(filename)
     # log('students', students)
+    # 配置
     (student, sheet) = new_of_xls(sheetname='student')
     wirte_of_students(students, sheet)
     student.save('student.xls')

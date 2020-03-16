@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<numbers>
+		<!-- 数字信息-->
+		[{'id': '1', 'num1': '1', 'num2': '82', 'num3': '65535'}, {'id': '2', 'num1': '20', 'num2': '90', 'num3': '13'}, {'id': '3', 'num1': '26', 'num2': '809', 'num3': '1024'}]
+	</numbers>
+</root>
